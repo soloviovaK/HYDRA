@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HYDRA</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+  <header>
+    <h1>HYDRA</h1>
+    <nav>
+     <ul class="menu">
+      <a href="#about"> About </a>
+      <a href="#sevices"> Services</a>
+      <a href="#technologies"> Technologies </a>
