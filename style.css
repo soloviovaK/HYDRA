@@ -19,9 +19,15 @@ a {
   text-decoration:none;
 
 }
+
+.wrapper {
+background:#302C42;
+width: 100%
+}
 img {
   max-width: 100%;
   position:relative;
   float:right;
   right:50px
   top: 150px;
+}
