@@ -1,0 +1,27 @@
+montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+{
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+  
+a {
+  text-decoration:none;
+
+}
+img {
+  max-width: 100%;
+  position:relative;
+  float:right;
+  right:50px
+  top: 150px;
