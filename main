@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>HYDRA</title>
-  <link rel="stylesheet" href="HYDRA/css/main.css">
+<link 
 </head>
-  <header>
-    <h1>HYDRA</h1>
+    <body>
+    <header class="container">
+      <span class="logo"> HYDRA  </span>
     <nav>
-     <ul class="menu">
-      <a href="#about"> About </a>
-      <a href="#sevices"> Services</a>
-      <a href="#technologies"> Technologies </a>
-    </nav>
+      <ul>
+     <li class="active">
+      <li><a href="#about"> About </a> </li>
+      <li><a href="#sevices"> Services</a>  </li>
+      <li><a href="#technologies"> Technologies </a> </li>
+      <li><a href="#how to"> How to</a> </li>
+      <li class="btn"> <button href="#contact"> Contact Us </button> </li>
+      <li class="btn"> <button href="#join"> Join HYDRA </button> </li>
+      </ul>
+      </nav>
+      </body>
+      </header>
