@@ -13,6 +13,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  color: white;
 }
   
 a {
@@ -24,6 +25,37 @@ a {
 background:#302C42;
 width: 100%
 }
+
+.container{
+  width:1400px;
+  margin: 0 auto;
+}
+header {
+padding:50 0;
+}
+
+header nav{
+  float:right;
+  width:50%;
+}
+ header nav ul {
+ list-style: none;
+ display: flex;
+ justify-content: space-between;
+ }
+
+header nav ul li {
+display: inline-block;
+}
+
+header nav ul li a {
+color:# FFFFFF
+}
+
+header nav ul li:not(.active): not(.btn) a:hover{
+  border-bottom: 5px solid #DC7000;
+}
+  
 img {
   max-width: 100%;
   position:relative;
