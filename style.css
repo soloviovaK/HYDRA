@@ -1,151 +1,132 @@
-/* Сброс */
-*,
-*::before,
-*::after {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  background-color: #302C42;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #212135;
   color: white;
 }
 
-.wrapper {
-  width: 100%;
+/* Header */
+.header {
+  position: relative;
+  z-index: 3;
+  padding: 20px 0;
+  background-color: transparent;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-/* Header */
-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 40px 0;
 }
 
-.logo-img {
-  height: 60px;
+/* Logo */
+.logo {
+  width: 80px;
 }
 
-nav ul {
-  list-style: none;
+/* Navigation */
+.nav {
   display: flex;
-  gap: 25px;
-  align-items: center;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
-nav ul li a {
-  color: #FFFFFF;
+.nav a {
+  color: white;
   text-decoration: none;
-}
-
-nav ul li:not(.btn):hover a {
-  border-bottom: 3px solid #DC7000;
-}
-
-nav ul li.btn a {
-  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
-  padding: 9px 17px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-nav ul li.btn a:hover {
-  background: #8176AF;
-}
-
-/* Hero section */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 0;
-  flex-wrap: wrap;
-}
-
-.hero-info {
-  max-width: 600px;
-  flex: 1;
-}
-
-.hero-info h2 {
-  color: #C0B7E8;
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.hero-info p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.btn-main {
-  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
-  color: #FFFFFF;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 5px;
   font-weight: 500;
+}
+
+/* Header buttons */
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn,
+.btn-primary {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+.btn {
+  background-color: #b09eff;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #8855ff;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -100px; /* поднимаем секцию вверх */
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+}
+
+.hero-info {
+  flex: 1;
+  z-index: 3;
+}
+
+.hero-info h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.hero-info p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-main {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .btn-main:hover {
-  background: #8176AF;
-  transform: scale(1.05);
+  background-color: #fff;
+  color: #212135;
 }
 
 .hero-img-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: -100px; /* заставляем картинку залезть наверх */
 }
 
 .hero-img {
-  max-width: 100%;
-  height: auto;
-  max-width: 500px;
+  width: 100%;
+  max-width: 450px;
 }
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 0;
-  }
-
-  nav ul {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .hero-info h2 {
-    font-size: 24px;
-  }
-
-  .hero-info p {
-    font-size: 16px;
-  }
-
-  .btn-main {
-    margin-top: 20px;
-  }
-
-  .hero-img-wrapper {
-    margin-top: 30px;
-  }
-}
-
