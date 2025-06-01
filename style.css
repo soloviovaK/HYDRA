@@ -1,4 +1,4 @@
-/* Normalize default styles */
+/* Сброс */
 *,
 *::before,
 *::after {
@@ -9,13 +9,11 @@
 
 html, body {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   font-size: 16px;
-  color: white;
   background-color: #302C42;
+  color: white;
 }
 
-/* Layout containers */
 .wrapper {
   width: 100%;
 }
@@ -26,7 +24,7 @@ html, body {
   padding: 0 20px;
 }
 
-/* Header styles */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -38,23 +36,17 @@ header {
   height: 60px;
 }
 
-nav {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 25px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
-  transition: border 0.3s;
 }
 
 nav ul li:not(.btn):hover a {
@@ -78,11 +70,12 @@ nav ul li.btn a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 60px 0;
-  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .hero-info {
   max-width: 600px;
+  flex: 1;
 }
 
 .hero-info h2 {
@@ -96,7 +89,6 @@ nav ul li.btn a:hover {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #FFFFFF;
 }
 
 .btn-main {
@@ -106,8 +98,8 @@ nav ul li.btn a:hover {
   border: none;
   border-radius: 5px;
   font-weight: 500;
-  transition: all 0.3s ease;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-main:hover {
@@ -115,8 +107,45 @@ nav ul li.btn a:hover {
   transform: scale(1.05);
 }
 
+.hero-img-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .hero-img {
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
+  max-width: 500px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-info h2 {
+    font-size: 24px;
+  }
+
+  .hero-info p {
+    font-size: 16px;
+  }
+
+  .btn-main {
+    margin-top: 20px;
+  }
+
+  .hero-img-wrapper {
+    margin-top: 30px;
+  }
 }
 
