@@ -1,6 +1,4 @@
-/* Удалён неправильный селектор montserrat-<uniquifier> */
-
-/* Сброс отступов */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,140 +10,138 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: white;
-  background: #302C42; /* Добавлен фон сразу в body */
+  background: #302c42;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 .wrapper {
   width: 100%;
+  background: #302c42;
 }
 
 .container {
-  width: 100%;
-  max-width: auto;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 30px 20px;
 }
 
+/* Header */
 header {
-  padding: 50px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-header nav {
-  width: 50%;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-header nav ul li {
-  display: inline-block;
-}
-
-header nav ul li a {
-  color: #FFFFFF;
-}
-
-header nav ul li:not(.active):not(.btn) a:hover {
-  border-bottom: 5px solid #DC7000;
-}
-
-header nav ul li.btn a {
-  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
-  padding: 9px 17px;
-  border-radius: 5px;
-  transition: all 500ms ease;
-  color: #FFFFFF;
-}
-
-header nav ul li.btn a:hover {
-  background: #8176AF;
-}
-
-header nav ul li.active::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 5px;
-  background: #FFFFFF;
-  border-radius: 100px;
-  position: relative;
-  top: 10px;
-  left: -15px;
-}
-
-/* Hero Section */
-.herocontainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 100px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.hero--info h2 {
-  color: violet;
-  font-size: 40px;
-  font-weight: 600;
-}
-
-.hero--info p {
-  color: #FFFFFF;
-  font-size: 20px;
-  line-height: 1.5;
-  margin: 30px 0;
-}
-
-/* Кнопка */
-.hero--info .btn {
-  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
-  color: #FFFFFF;
-  padding: 15px 30px;
-  border: 0;
-  border-radius: 5px;
-  transition: all 500ms ease;
-}
-
-.hero--info .btn:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-/* Картинка */
-img.hero {
-  max-width: 100%;
-  position: absolute;
-  top: -150px;
-  right: 0;
-}
 .logo-block {
   display: flex;
   align-items: center;
 }
 
 .logot {
-  height: 40px; /* можешь подстроить под нужный размер */
-  margin-right: 10px;
+  height: 50px;
+  width: auto;
 }
 
-.logo-text {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+/* Navigation */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+nav ul li:not(.btn):hover a {
+  border-bottom: 3px solid #dc7000;
+}
+
+nav ul li.btn a {
+  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 300ms ease;
+}
+
+nav ul li.btn a:hover {
+  background: #8176af;
+}
+
+nav ul li.active a::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 100px;
+  margin-top: 5px;
+}
+
+/* Hero Section */
+.hero--info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 80px 0;
+}
+
+.text-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero--info h2 {
+  color: #c778dd;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero--info p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.hero--info .btn {
+  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.hero--info .btn:hover {
+  background: #8176af;
+}
+
+.hero-img {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
 }
 
 
