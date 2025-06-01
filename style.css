@@ -1,12 +1,10 @@
-montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-{
-  margin:0;
-  padding:0;
+/* Удалён неправильный селектор montserrat-<uniquifier> */
+
+/* Сброс отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,116 +12,124 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: white;
+  background: #302C42; /* Добавлен фон сразу в body */
 }
-  
-a {
-  text-decoration:none;
 
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .wrapper {
-background:#302C42;
-width: 100%
+  width: 100%;
 }
 
-.container{
-  width:1350px;
+.container {
+  width: 1350px;
   margin: 0 auto;
 }
+
 header {
-padding:50 0;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header nav{
-  float:right;
-  width:50%;
+header nav {
+  width: 50%;
 }
- header nav ul {
- list-style: none;
- display: flex;
- justify-content: space-between;
-position: relative;
-z-index: 2;
- }
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
 
 header nav ul li {
-display: inline-block;
+  display: inline-block;
 }
 
 header nav ul li a {
-color:# FFFFFF
+  color: #FFFFFF;
 }
 
-header nav ul li:not(.active): not(.btn) a:hover{
+header nav ul li:not(.active):not(.btn) a:hover {
   border-bottom: 5px solid #DC7000;
 }
-  
-img {
-  max-width: 100%;
+
+header nav ul li.btn a {
+  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 500ms ease;
+  color: #FFFFFF;
+}
+
+header nav ul li.btn a:hover {
+  background: #8176AF;
+}
+
+header nav ul li.active::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  background: #FFFFFF;
+  border-radius: 100px;
   position: relative;
-  float:right;
-  right:50px
-  top: 150px;
-}
-header nav ul li .btn a {
-background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
-padding: 9px 17px;
-boarder-radius: 5px;
-transition: all 500ms ease;
-}
-header nav ul li .btn a:hover{
-background: #8176AF;
+  top: 10px;
+  left: -15px;
 }
 
-header nav ul li .active::after {
-context: "";
-display: block;
-width: 40px;
-height: 5px;
-background: #FFFFF;
-border-radius: 100px;
-position: relative;
-top: 10 px;
-left: -15px;
-}
-
-.hero {
-padding-bottom: 100px;
-position: relative;
-z-index:1;
+/* Hero Section */
+.herocontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .hero--info h2 {
-color: violet;
-font-size: 20px;
-font-weight: 60px;
-}
-p{
-color: #FFFFFF;
-font-size: 30px;
-font-weight: 60px;
-line-height: 100%
-margin: 30px;
-}
-hero--info.btn{
-background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
-color:#FFFFFF;
-padding: 15px 30px;
-border:0;
-transition: all 500ms case;
+  color: violet;
+  font-size: 40px;
+  font-weight: 600;
 }
 
-.hero--info.btn:hover{
-cursor:pointer;
-transform: scale(1:1);
+.hero--info p {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 30px 0;
 }
 
-img{
-position:absolute;
-top:-150px;
-right:0;
+/* Кнопка */
+.hero--info .btn {
+  background: linear-gradient(90deg, rgba(129, 118, 175, 1) 0%, rgba(192, 183, 232, 1) 100%);
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 5px;
+  transition: all 500ms ease;
 }
 
+.hero--info .btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Картинка */
+img.hero {
+  max-width: 100%;
+  position: absolute;
+  top: -150px;
+  right: 0;
+}
 
 
 
