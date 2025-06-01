@@ -118,7 +118,7 @@ cursor:pointer;
 transform: scale(1:1);
 }
 
-hero img{
+img{
 position:absolute;
 top:-150px;
 right:0;
